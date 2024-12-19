@@ -1,0 +1,29 @@
+{
+  "name": "chau-func-auth",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf dist",
+    "prestart": "npm run clean && npm run build",
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.0",
+    "@types/auth0": "^3.3.10",
+    "@types/lodash": "^4.17.13",
+    "env-var": "^7.5.0",
+    "fast-redact": "^3.5.0",
+    "jwks-rsa": "^1.12.3",
+    "winston": "^3.17.0",
+    "winston-transport-sentry-node": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.x",
+    "rimraf": "^5.0.0",
+    "typescript": "^4.0.0"
+  },
+  "main": "dist/src/{index.js,functions/httpTriggerChau.js}"
+}
